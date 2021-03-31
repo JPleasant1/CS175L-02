@@ -16,6 +16,8 @@ public class Age {
 		
 		inputwindow = JOptionPane.showInputDialog("Enter today's date (MM/DD/YYYY): ");
 		
+		int months = Period.between(bday, today).getMonths() - (12 * Period.between(bday, today).getYears());
+		
 		JOptionPane.showMessageDialog(null, "You are " + Period.between(bday, today).getYears() + " years old");
 		
 	}
